@@ -1,0 +1,52 @@
+CBOM Builder — source provenance for data/processed/pqc_crosswalk.csv
+=======================================================================
+
+This crosswalk is compiled desk research, not a machine-fetched dataset: there is no
+single downloadable table to hash. Each row's classical-algorithm characterization and
+each PQC/CNSA 2.0 mapping is traceable to a specific public specification or federal
+guidance document, listed below with the date it was consulted while building this
+project. Re-verifying a row means opening the cited spec and checking the row's fields
+against it (see docs/VERIFY_CHECKLIST.md).
+
+Accessed: 2026-09-13
+
+PQC standards and federal guidance
+-----------------------------------
+- NIST FIPS 203 (Module-Lattice-Based Key-Encapsulation Mechanism / ML-KEM) — final,
+  2024-08-13. https://www.federalregister.gov/documents/2024/08/14/2024-17956/
+- NIST FIPS 204 (Module-Lattice-Based Digital Signature / ML-DSA) — final, 2024-08-13.
+  https://www.federalregister.gov/documents/2024/08/14/2024-17956/
+- NIST FIPS 205 (Stateless Hash-Based Digital Signature / SLH-DSA) — final, 2024-08-13.
+  https://www.federalregister.gov/documents/2024/08/14/2024-17956/
+- NIST SP 800-208 (Stateful hash-based signatures: LMS, XMSS) — used for firmware/software
+  signing rows.
+- NIST SP 1800-38A/B/C, Migration to Post-Quantum Cryptography (NCCoE) — STATUS: Preliminary
+  Draft, published 2023-04-24; NOT yet finalized. Flagged as draft guidance everywhere it is
+  cited in this project.
+  https://www.nccoe.nist.gov/publications/practice-guide/migration-post-quantum-cryptography-nist-sp-1800-38-practice-guide
+- NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0) FAQ — algorithm/use-case
+  table and 2025/2026/2027/2030/2033 transition dates, published 2022-09-07.
+  https://media.defense.gov/2022/Sep/07/2003071836/-1/-1/0/CSI_CNSA_2.0_FAQ_.PDF
+
+Protocol / component specifications (source of each row's classical-algorithm column)
+----------------------------------------------------------------------------------------
+- Modbus Application Protocol V1.1b3 (base protocol, no native security).
+  https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf
+- Modbus/TCP Security v21 (TLS-based add-on).
+  https://modbus.org/docs/MB-TCP-Security-v21_2018-07-24.pdf
+- IEEE 1815-2012 (DNP3 Secure Authentication v5) and IEEE 1815-2020 (DNP3 SAv6 /
+  Asymmetric Management Protocol). https://www.dnp.org
+- OPC 10000-7: OPC UA Part 7 — Profiles (SecurityPolicy definitions, including
+  Basic256Sha256 and Aes256Sha256RsaPss). https://reference.opcfoundation.org/Core/Part7/
+- IEC 62351-3:2023, Ed. 2 (TLS profile for power-system protocols).
+  https://webstore.iec.ch/en/publication/68410
+- IEEE 802.1AR-2018 (Secure Device Identity). https://standards.ieee.org/ieee/802.1AR/6995/
+- MQTT Version 5.0 (OASIS). https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html
+- RFC 8446 (TLS 1.3). https://www.rfc-editor.org/rfc/rfc8446
+- RFC 3414 (User-based Security Model for SNMPv3). https://www.rfc-editor.org/rfc/rfc3414
+
+Known gap
+---------
+SP 1800-38's draft status means its migration recommendations may change before it is
+finalized. Any release of this project should check for a newer (final) revision before
+the crosswalk is cited as authoritative guidance rather than a practical starting point.

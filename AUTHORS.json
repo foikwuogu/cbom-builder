@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "name": "Friday Ogochukwu Ikwuogu",
+      "family": "Ikwuogu",
+      "given": "Friday Ogochukwu",
+      "orcid": "0009-0009-2222-1318",
+      "email": "fo.ikwuogu@gmail.com",
+      "affiliation": "Independent Researcher, Odessa, Texas, USA",
+      "roles": ["Conceptualization", "Methodology", "Software", "Data curation",
+                 "Validation", "Writing - original draft"],
+      "corresponding": true
+    }
+  ],
+  "collaborators": [
+    {
+      "name": "Pius Businge",
+      "family": "Businge",
+      "given": "Pius",
+      "orcid": "",
+      "email": "busingepius@gmail.com",
+      "affiliation": "Computer Science Department, Maharishi International University",
+      "roles": ["Validation", "Writing - review and editing"],
+      "corresponding": false
+    }
+  ]
+}

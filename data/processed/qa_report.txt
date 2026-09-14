@@ -1,0 +1,24 @@
+CBOM Builder v0.1 -- QA report
+Generated: 2026-09-13T06:59:33.304566+00:00
+
+Crosswalk rows: 16
+Test-suite result: 18/18 passed (python3 -m unittest discover -s tests)
+
+-- Row-level integrity checks on the crosswalk --
+Unique ids: True (16 rows)
+Rows missing a required column: none
+quantum_threat distribution: {'no-crypto': 2, 'broken-by-shor': 11, 'weakened-by-grover': 3}
+Rows with no source_url (expected only for the no-crypto baseline row): ['OT-013']
+
+-- Sample-inventory scan (tests/fixtures/sample_inventory.csv) --
+Rows scanned: 8
+Quantum-threat counts: {'broken-by-shor': 4, 'weakened-by-grover': 1, 'no-crypto': 2, 'not-vulnerable': 0}
+Unmatched: ['UNKNOWN-DEV-99']
+Ambiguous: []
+
+-- Named spot checks (author to re-verify by hand against the cited spec) --
+OT-001: Modbus/TCP (base) / Application data channel -> no-crypto, source: Modbus Application Protocol V1.1b3 (no native security)
+OT-006: OPC UA / SecurityPolicy Basic256Sha256 (handshake + certificates) -> broken-by-shor, source: OPC 10000-7: UA Part 7 -- Profiles, SecurityPolicy Basic256Sha256
+OT-010: OT firmware/software update signing (PLC, RTU, IED firmware images) / Firmware signature -> broken-by-shor, source: NIST SP 800-208; NSA CNSA 2.0 FAQ
+OT-013: Legacy cleartext management (Telnet, unencrypted HTTP, FTP) / Management-plane transport -> no-crypto, source: n/a -- protocols predate TLS adoption
+OT-014: X.509 certificate (generic / protocol-agnostic) / RSA public key -> broken-by-shor, source: RFC 5280 (Internet X.509 Public Key Infrastructure Certificate)

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or crosswalk, please cite it as below."
+type: software
+title: "CBOM Builder: analyzing OT protocol and identity components against a PQC readiness crosswalk"
+version: "0.1.0"
+date-released: "2026-09-13"
+authors:
+  - family-names: "Ikwuogu"
+    given-names: "Friday Ogochukwu"
+    orcid: "https://orcid.org/0009-0009-2222-1318"
+    affiliation: "Independent Researcher, Odessa, Texas, USA"
+  - family-names: "Businge"
+    given-names: "Pius"
+    affiliation: "Computer Science Department, Maharishi International University"
+license: MIT
+repository-code: "https://github.com/foikwuogu/cbom-builder"
+keywords:
+  - "post-quantum cryptography"
+  - "cryptographic bill of materials"
+  - "operational technology"
+  - "OT security"
+  - "PQC migration"
+  - "CNSA 2.0"

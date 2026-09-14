@@ -1,0 +1,9 @@
+asset_id,protocol,component,location
+PLC-101,Modbus/TCP (base),Application data channel,Substation A - RTU rack 1
+HMI-GW-02,OPC UA,SecurityPolicy Basic256Sha256,Control room
+RTU-204,DNP3 Secure Authentication v5 (SAv5),Message authentication,Substation B
+RTU-205,DNP3 SAv6 / Asymmetric Management Protocol (AMP),Authority Key (root key management),Substation B
+FW-SIGN-01,"OT firmware/software update signing (PLC, RTU, IED firmware images)",Firmware signature,Engineering workstation
+MGMT-SW-07,"Legacy cleartext management (Telnet, unencrypted HTTP, FTP)",Management-plane transport,Substation C switch
+IIOT-EDGE-03,MQTT (IIoT/OT gateway telemetry) over TLS,TLS 1.2/1.3 session,Field gateway
+UNKNOWN-DEV-99,ProtocolNobodyDocumented,,Unknown closet

@@ -1,0 +1,38 @@
+"""Synthetic self-signed test certificates (NOT real device credentials).
+
+Generated for cbom-builder's test suite only -- private keys were discarded
+immediately after signing; only the public certificates are stored here, and
+only to exercise src/cbom_builder/parsers/x509_parser.py.
+"""
+
+RSA_2048_CERT_PEM = """-----BEGIN CERTIFICATE-----
+MIIC4DCCAcigAwIBAgIUfmj2Jga+C2DT6JSOyK6nGNljKwMwDQYJKoZIhvcNAQEL
+BQAwKjEoMCYGA1UEAwwfdGVzdC1yc2EtZGV2aWNlLmV4YW1wbGUuaW52YWxpZDAe
+Fw0yNjA5MTIwNjU3MDVaFw0yNzA5MTMwNjU3MDVaMCoxKDAmBgNVBAMMH3Rlc3Qt
+cnNhLWRldmljZS5leGFtcGxlLmludmFsaWQwggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQDUS/IvPE9a2YD4d3Sc5y/mpnIG142BbylHx9pUAmqRG+DNfoNO
+rYDFSRIJHmNMnvbb7d3Mjh6IXknOTe6UiG4Epi65+nv+IfkLy4b80CbSSO5bKhYL
+LZQ2ROExoWjZOnqmKagPUdJztbol6biMVIu5KDZWbcKqmiZSMTbFUlBgj29J7X5h
+MW6TB45PGnHNW73IuT+/cBU2vUUc6lsHMsxcwIXQm4F9X7ngV5ba0ynitB+HKePA
+O2a3cr5l3V+LeIaZERytJeauSVnqcAOHRsw3nfg7MZeSZQEqSC41RkyH3JE5OcXc
+4WR2D9AwnWskLDQ4Lxji6L4JwC3H31GMtbrZAgMBAAEwDQYJKoZIhvcNAQELBQAD
+ggEBAJ2bgLxrQ0wc6z3sjwyHkRSxEo1HiNV5DVTrWdfdDXj/LFqzitN3hSEE7psd
+ZjE0JPSA7aIFnKiZXRICGG1YgSvtQXMP2W8y6mGzqCmXx2mi5WuKGo/aLn36qC6Z
+biORN4XqtuM9ctaLPUtqnt3H4jbBLmIsi0ygjdcA6Tp5nv1vqqKdVWib5ZdCnyGy
+0n/ypM8lIYATmVjiD+meq2hBa3NVZRq6XnqBFSfHsCEy61B4JkZUyrCnUyVXvWyq
+7g9N9TiyG6uuv9HoVQUsuzAVYpn/eB2EwhlqBFB4HPgyOojEyaHOSI7piQ5sXL5P
+AUokwtlABOaDzWh9gi9uZgj7h/w=
+-----END CERTIFICATE-----
+"""
+
+EC_P256_CERT_PEM = """-----BEGIN CERTIFICATE-----
+MIIBUDCB+KADAgECAhR/TEfvvjB+wR8m2lL4ZIcFsKAv0jAKBggqhkjOPQQDAjAp
+MScwJQYDVQQDDB50ZXN0LWVjLWRldmljZS5leGFtcGxlLmludmFsaWQwHhcNMjYw
+OTEyMDY1NzA1WhcNMjcwOTEzMDY1NzA1WjApMScwJQYDVQQDDB50ZXN0LWVjLWRl
+dmljZS5leGFtcGxlLmludmFsaWQwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATU
+9FyPPFyIAylMN4sQ93/KY6m2ZxFePHUiYVKA4vEv6Ta3urfqrLr1gzhR2Sp0OuNq
+3ytZX4hzpwbqjfBtObpaMAoGCCqGSM49BAMCA0cAMEQCIH59sHaGB4OdJijyjXFN
+OZYBQikwq8elQ4uKUPNN5S6OAiB/qHrRfzQ1yq/b04iRp5nrBUFRq2ZChpOOJM7/
+Gvw4NA==
+-----END CERTIFICATE-----
+"""
