@@ -1,6 +1,6 @@
 # CBOM Builder
 
-**Status:** v0.1.0, author-verified, pending first release | **Maintainer:** Friday Ogochukwu Ikwuogu,
+**Status:** v0.1.0, released on Zenodo ([10.5281/zenodo.22783090](https://doi.org/10.5281/zenodo.22783090)); source-level author checks in progress (see `docs/VERIFY_CHECKLIST.md`) | **Maintainer:** Friday Ogochukwu Ikwuogu,
 [ORCID 0009-0009-2222-1318](https://orcid.org/0009-0009-2222-1318) | **License:** code
 [MIT](LICENSE), crosswalk/docs [CC BY 4.0](LICENSE)
 
@@ -105,3 +105,7 @@ See [`CITATION.cff`](CITATION.cff). DOI: pending first release.
 ## Contributing
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+## AI assistance
+
+**AI assistance:** AI coding tools (Claude, Anthropic) were used for code scaffolding, test fixtures, and documentation drafting. The problem definition, methodology, classification rules, mappings, and analytic decisions are the author's own.

@@ -1,13 +1,5 @@
-# Publish guide (manual — this session's sandbox cannot push directly)
+# Publish guide (manual)
 
-**Why this is manual:** this cloud sandbox's outbound git/GitHub access is filtered by
-an Anthropic-managed proxy that only allows pushes to repositories explicitly attached
-to the session as a "source" — it rejected the push with `access denied by the git
-proxy: foikwuogu/cbom-builder is not in this session's authorized repository set`, even
-with your own personal access token. That's a platform-level restriction on this
-sandbox, not a problem with your token or the repository. The commit is made locally
-(see below) — you just need to push it from your own machine, which takes under a
-minute.
 
 ## What's already done
 
@@ -62,8 +54,8 @@ minute.
    go to `https://zenodo.org/account/settings/github/` (or the newer Zenodo/GitHub
    app flow), sign in with your GitHub account, and flip the toggle on for
    `cbom-builder`. Every future GitHub Release then mints a Zenodo DOI automatically.
-   Alternatively, `scripts/zenodo_deposit.py` in this repo can do it from a future
-   Claude session if you provide a `ZENODO_TOKEN` there. Either way, log the DOI in
+   Alternatively, use `scripts/zenodo_deposit.py` in this repo with a `ZENODO_TOKEN`.
+   Either way, log the DOI in
    `CITATION.cff`'s `doi:` field once you have it.
 
 That's the whole path — steps 1–4 are the only required ones; 5–7 can happen whenever
